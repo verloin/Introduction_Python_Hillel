@@ -38,8 +38,6 @@ def pow_and_rewritten():
     with open('test.txt', 'r') as for_test:
         my_list = for_test.readlines()
 
-        print(len(my_list[-1][:-2].split(' ')))
-
         assert len(my_list) != 0,  'The list should not be empty'
         assert len(my_list) == 200, 'The length of list should be 100'
         assert len(my_list[-1][:-2].split(' ')) == 10, 'The length of last string should be 10'
