@@ -59,8 +59,8 @@ print(culc(string))
 
 
 def test_culc():
-    utf.ExpectEqual(culc("1 + 1"), 2) == "SUCCESS", "SUCCESS in culc('1 + 1')"
-    utf.ExpectEqual(culc("1000 - 200 * 50"), 40000) == "SUCCESS", "SUCCESS in culc('10 / 0')"
-    utf.ExpectEqual(culc("10 + 5 * 4 / 2"), 30.0) == "SUCCESS", "SUCCESS in culc('10 + 5 * 4 / 2')"
+    utf.ExpectEqual(culc("1 +     1"), 2)
+    utf.ExpectEqual(culc("1000 - 200 * 50"), 40000)
+    utf.ExpectEqual(culc("10 + 5 * 4 / 2"), 30.0)
 
 test_culc()
