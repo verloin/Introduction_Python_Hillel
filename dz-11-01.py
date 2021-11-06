@@ -1,4 +1,4 @@
-import unit_test_framework
+import unit_test_framework as utf
 import operator
 
 class FormulaError(Exception): 
@@ -11,7 +11,7 @@ ops = {
     '/' : operator.truediv
 }
 
-string = '1 + 2 = 3 % 4'
+string = input()
 
 def calculation(string):
     try:
@@ -26,8 +26,8 @@ def calculation(string):
 def check_input(string):
     lst = string.split()
 
-    # if len(start_list) != 3:
-    #     raise FormulaError('Input does not consist of three elements')
+    if len(lst) == 0:
+        raise FormulaError('Input does not consist of three elements')
     try:
         num1 = float(lst[0])
         num2 = float(lst[2])
@@ -57,6 +57,10 @@ def culc(string):
 
 print(culc(string))
 
-assert unit_test_framework.ExpectEqual(culc("1 + 1"), 2) == "SUCCESS", "SUCCESS in culc('1 + 1')"
-assert unit_test_framework.ExpectEqual(culc("10 - 1"), 9) == "SUCCESS", "SUCCESS in culc('10 / 0')"
-assert unit_test_framework.ExpectEqual(culc("10 + 5 * 4 / 2"), 30.0) == "SUCCESS", "SUCCESS in culc('10 + 5 * 4 / 2')"
+
+def test_culc():
+    utf.ExpectEqual(culc("1 + 1"), 2) == "SUCCESS", "SUCCESS in culc('1 + 1')"
+    utf.ExpectEqual(culc("1000 - 200 * 50"), 40000) == "SUCCESS", "SUCCESS in culc('10 / 0')"
+    utf.ExpectEqual(culc("10 + 5 * 4 / 2"), 30.0) == "SUCCESS", "SUCCESS in culc('10 + 5 * 4 / 2')"
+
+test_culc()
