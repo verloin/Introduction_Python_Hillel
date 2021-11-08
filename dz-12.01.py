@@ -1,7 +1,6 @@
-# pip install prettytable
-# from prettytable import PrettyTable
+from prettytable import PrettyTable
 
-# resultTable = PrettyTable()
+resultTable = PrettyTable()
 
 
 class Homework:
@@ -23,11 +22,14 @@ class Student:
         self.subscribed_courses = []
         self.homeworks = {}
 
+
     def __repr__(self):
         return f"{self.name} | {self.age} | {self.homeworks}"
 
+
     def add_homework(self, hw_number, homework):
         self.homeworks[hw_number] = homework
+
 
     def is_homework_done(self, hw_number):
         if len(self.homeworks) == 0:
@@ -36,6 +38,7 @@ class Student:
         if current_hw:
             return current_hw.status
         return Exception("No such homework")
+
 
     def change_homework_status(self, hw_number, status=True):
         current_hw = self.homeworks.get(hw_number)
@@ -70,26 +73,49 @@ class Table:
             )
         return summary
 
+    def get_summary_table(self):
+        resultTable.field_names = [
+            "Name",
+            "Age",
+            "Grade",
+            "Subscribed courses",
+            "Homeworks",
+        ]
+        for student in self.students:
+            resultTable.add_row(
+                [
+                    student.name,
+                    student.age,
+                    student.grade,
+                    student.subscribed_courses,
+                    student.homeworks,
+                ]
+            )
+        return resultTable
 
-school = [Student("Ivan", 25, 0), 
-          Student("Ivan 2", 35, 0), 
-          Student("Ivan 3", 35, 0)
-          ]
 
-hw1 = Homework("OOP intorduction", "Extend logic for Student program", 2, False)
+school = [
+            Student("Ivan 1", 15, 0), 
+            Student("Ivan 2", 25, 0), 
+            Student("Ivan 3", 15, 0),
+            Student("Petr", 18, 1),
+            Student("Sergey", 22, 1)]
+
+h = Homework("OOP intorduction", "Extend logic for Student program", 2, False)
 hw2 = Homework("Python web", "Extend logic for Student program", 2, False)
 
 table = Table(name="Intro Python")
-# table_b = Table(name="Python web")
 
 for student in school:
-    student.add_homework(1, hw1)
+    student.add_homework(1, h)
     student.add_homework(2, hw2)
     table.add_student(student)
 
+petr = Student("Petr", 18, 1)
+petr.add_homework(2, hw2)
+petr.change_homework_status(2)
 
-summary = table.get_summary()
-for item in summary:
-    print(item)
-
+print(petr.homeworks)
+print('================')
+print(table.get_summary_table())
 
