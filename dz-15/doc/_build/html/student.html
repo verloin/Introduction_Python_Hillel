@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>student module &#8212; hillel  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="student_test module" href="student_test.html" />
+    <link rel="prev" title="school_exceptions module" href="school_exceptions.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-student">
+<span id="student-module"></span><h1>student module<a class="headerlink" href="#module-student" title="Permalink to this headline">¶</a></h1>
+<p>This module contains class Student</p>
+<p>class Student inherited from Person need for creation object student
+Raises:</p>
+<blockquote>
+<div><p>HomeworkStatusException
+HomeworkException</p>
+</div></blockquote>
+<dl class="py class">
+<dt class="sig sig-object py" id="student.Student">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">student.</span></span><span class="sig-name descname"><span class="pre">Student</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">age</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grade</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#student.Student" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="person.html#person.Person" title="person.Person"><code class="xref py py-class docutils literal notranslate"><span class="pre">person.Person</span></code></a></p>
+<p>This class described student and needed for creation object student</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>name: for naming object student
+age: for indicating age of student
+subscribed_courses: indicates the student’s courses
+homeworks: to display the student’s homework</p>
+</dd>
+<dt>Methods:</dt><dd><p>add_homework: This method added homework for student
+is_homework_done: This method for checking whether the work is done</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="student.Student.add_homework">
+<span class="sig-name descname"><span class="pre">add_homework</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">homework</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#student.Student.add_homework" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method added homework to homework collections
+Args:</p>
+<blockquote>
+<div><p>homework</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Raises: </dt><dd><p>HomeworkStatusException</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="student.Student.is_homework_done">
+<span class="sig-name descname"><span class="pre">is_homework_done</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#student.Student.is_homework_done" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method check homework for srudent
+Raises:</p>
+<blockquote>
+<div><p>HomeworkException</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>homework: returns status homework</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">hillel</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">dz-13</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="course.html">course module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="employee.html">employee module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="employee_test.html">employee_test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helper.html">helper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework.html">homework module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homework_test.html">homework_test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="person.html">person module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="school_exceptions.html">school_exceptions module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">student module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="student_test.html">student_test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table.html">table module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teacher.html">teacher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teacher_test.html">teacher_test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unit_test_framework.html">unit_test_framework module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">dz-13</a><ul>
+      <li>Previous: <a href="school_exceptions.html" title="previous chapter">school_exceptions module</a></li>
+      <li>Next: <a href="student_test.html" title="next chapter">student_test module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Yury.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/student.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
