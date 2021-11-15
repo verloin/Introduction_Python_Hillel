@@ -3,8 +3,8 @@ This module contains class Student
 
 class Student inherited from Person need for creation object student
 Raises:
-    HomeworkStatusException: [description]
-    HomeworkException: [description]
+    HomeworkStatusException
+    HomeworkException
 """
 
 from person import Person
@@ -14,7 +14,7 @@ from school_exceptions import HomeworkException, HomeworkStatusException
 
 class Student(Person):
     """
-    This class needed for creation object student
+    This class described student and needed for creation object student
 
     Args:
         name: for naming object student
@@ -36,11 +36,11 @@ class Student(Person):
 
     def add_homework(self, homework):
         """
-        This method added homework for student
+        This method added homework to homework collections
         Args: 
             homework
         Raises: 
-            HomeworkStatusException: [description]
+            HomeworkStatusException
         """
 
         if homework.status == 1:
@@ -51,12 +51,13 @@ class Student(Person):
         """
         This method check homework for srudent
         Raises:
-            HomeworkException:
+            HomeworkException
         Returns:
-            homework: status
+            homework: returns status homework
         """
 
         if len(self.homeworks) == 0:
             raise HomeworkException("Homeworks is empty")
         return self.homeworks[0].status
 
+print(Student.__doc__)

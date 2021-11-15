@@ -1,5 +1,5 @@
 """
-class Course need for creating coursa for student
+class Course need for creating course for student
 """
 
 class Course:

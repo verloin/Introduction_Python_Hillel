@@ -69,9 +69,7 @@ sort_students_by_age(test_students)
 sort_students_by_grade(test_students)
 
 def helper_tests():
-    """
-    This function needed for testing functions
-    """
+    """ This function needed for testing functions """
 
     utf.ExpectEqual(sort_students_by_age(test_students), sorted_students_age)
     utf.ExpectEqual(sort_students_by_grade(test_students), sorted_students_grade)

@@ -1,10 +1,7 @@
 """
 class HomeworkTest needed for testing the creation of object homework
 
-class:
-    HomeworkTest
-
-methods:
+Methods:
     Homework_Set_Test
     Homework_Name_Test
     Homework_Description_Test
@@ -33,16 +30,12 @@ class HomeworkTest:
 
     
     def Homework_Set_Test(self):
-        """
-        This method needed for transfer data of homework to variable
-        """
+        """ This method needed for transfer data of homework to variable """
 
         self.test_homework = Homework(self.test_name, self.test_description, self.test_complexity, self.test_status)
 
     def Homework_Name_Test(self):
-        """
-        This method needed for testing of naming name homework
-        """
+        """ This method needed for testing of naming name homework """
 
         self.Homework_Set_Test()
         actual = self.test_homework.name
@@ -50,9 +43,7 @@ class HomeworkTest:
         utf.ExpectEqual(actual, expected)
 
     def Homework_Description_Test(self):
-        """
-        This method needed for testing of description homework
-        """
+        """ This method needed for testing of description homework """
 
         self.Homework_Set_Test()
         actual = self.test_homework.description

@@ -17,7 +17,7 @@ class Table:
     This class creates instance of table contain students
 
     Arg:
-        name:  this arg for naming object table
+        name:  This arg for naming object table
     Returns:
         name:  returns naming object table
         resultTable:  returns table of students

@@ -33,16 +33,12 @@ class TeacherTest:
 
 
     def TeacherTestSetUp(self):
-        """
-        This method needed for transfer data of homework to variable
-        """
+        """ This method needed for transfer data of homework to variable """
 
         self.test_teacher = Teacher(self.test_name, self.test_age)
 
     def Teacher_Name_Test(self):
-        """
-        This method needed for testing of naming name teacher
-        """
+        """ This method needed for testing of naming name teacher """
 
         self.TeacherTestSetUp()
         actual = self.test_teacher.name
@@ -50,9 +46,7 @@ class TeacherTest:
         utf.ExpectEqual(actual, expected)
 
     def Teacher_Age_Test(self):
-        """
-        This method is needed for testing creation age of teacher
-        """
+        """ This method is needed for testing creation age of teacher """
 
         self.TeacherTestSetUp()
         actual = self.test_teacher.age
@@ -60,9 +54,7 @@ class TeacherTest:
         utf.ExpectEqual(actual, expected)
 
     def Teacher_Score_Test(self):
-        """
-        This method is needed for testing score of teacher
-        """
+        """ This method is needed for testing score of teacher """
 
         self.TeacherTestSetUp()
         actual = self.test_teacher.score
@@ -70,9 +62,7 @@ class TeacherTest:
         utf.ExpectEqual(actual, expected)
 
     def Teacher_Courses_Test(self):
-        """
-        This method for testing of available courses with a teacher
-        """
+        """ This method for testing of available courses with a teacher """
 
         self.TeacherTestSetUp()
         actual = self.test_teacher.courses

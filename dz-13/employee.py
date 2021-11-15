@@ -2,8 +2,6 @@
 This module contains class Employee 
 
 class Employee inherited from Person needed for creation of object employee
-Returns:
-    room: returns room of employee in string format
 """
 
 
@@ -14,9 +12,9 @@ class Employee(Person):
     This class needed for creation of object employee
     Args:
         Person:
-            name: this args is needed for naming object of employee
-            age: this args is needed for age of employee
-        room: this args is needed for naming room of employee
+            name: this arg is needed for naming object of employee
+            age: this arg is needed for age of employee
+        room: this arg is needed for naming room of employee
 
     Returns:
         room: returns room of employee in string format

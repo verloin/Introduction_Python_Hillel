@@ -17,9 +17,9 @@ class EmployeeTest:
     """
     This class is needed for testing the creation of object employee
     Args:
-        name: this args is needed for naming object of employee
-        age: this args is needed for age of employee
-        test_room: this args is needed for naming room of employee
+        name: this arg is needed for naming object of employee
+        age: this arg is needed for age of employee
+        test_room: this arg is needed for naming room of employee
     """
     
     def __init__(self):
@@ -31,9 +31,7 @@ class EmployeeTest:
         self.test_employee = Employee(self.test_name, self.test_age)
 
     def Employee_Name_Test(self):
-        """
-        This method is needed for testing creation name of employee
-        """
+        """  This method is needed for testing creation name of employee """
 
         self.Employee_Set_Test()
         actual = self.test_employee.name
@@ -41,9 +39,7 @@ class EmployeeTest:
         utf.ExpectEqual(actual, expected)
 
     def Employee_Age_Test(self):
-        """
-        This method is needed for testing creation age of employee 
-        """
+        """ This method is needed for testing creation age of employee """
 
         self.Employee_Set_Test()
         actual = self.test_employee.age
@@ -51,9 +47,7 @@ class EmployeeTest:
         utf.ExpectEqual(actual, expected)
 
     def Employee_Room_Test(self):
-        """
-        This method is needed for testing creation room of employee
-        """
+        """ This method is needed for testing creation room of employee """
 
         self.Employee_Set_Test()
         actual = self.test_employee.room

@@ -22,7 +22,6 @@ from school_exceptions import HomeworkException
 from school_exceptions import HomeworkStatusException
 
 class StudentTest:
-
     def __init__(self):
         self.test_name = "test_name"
         self.test_age = "99"
@@ -30,16 +29,12 @@ class StudentTest:
         self.test_student = Student("", 0, 0)
 
     def StudentTestSetUp(self):
-        """
-        This method needed for transfer data of Student to variable
-        """
+        """ This method needed for transfer data of Student to variable """
 
         self.test_student = Student(self.test_name, self.test_age, self.test_grade)
 
     def Student_Name_Test_1(self):
-        """
-        This module needed for testing  of naming by object student
-        """
+        """ This module needed for testing  of naming by object student """
 
         self.StudentTestSetUp()
         actual = self.test_student.name
@@ -47,9 +42,7 @@ class StudentTest:
         utf.ExpectEqual(actual, expected)
 
     def Student_Age_Test_1(self):
-        """
-        This module needed for testing the age of object student
-        """
+        """ This module needed for testing the age of object student """
 
         self.StudentTestSetUp()
         actual = self.test_student.age
@@ -57,9 +50,7 @@ class StudentTest:
         utf.ExpectEqual(actual, expected)
 
     def Student_Grade_Test_1(self):
-        """
-        This module needed for testing the grade of object student
-        """
+        """ This module needed for testing the grade of object student """
 
         self.StudentTestSetUp()
         actual = self.test_student.grade
@@ -67,9 +58,7 @@ class StudentTest:
         utf.ExpectEqual(actual, expected)
 
     def Student_AddHomework_Test_1(self):
-        """
-        This module needed for testing is homework added to student
-        """
+        """ This module needed for testing is homework added to student """
 
         self.StudentTestSetUp()
         self.test_student.add_homework(Homework("", "", 0, 0))
@@ -78,9 +67,7 @@ class StudentTest:
         utf.ExpectEqual(actual, expected)
 
     def Student_AddHomework_Test_2(self):
-        """
-        This module needed for testing is homework added to student
-        """
+        """ This module needed for testing is homework added to student """
 
         self.StudentTestSetUp()
         self.test_student.add_homework(Homework("", "", 0, 0))
@@ -91,9 +78,7 @@ class StudentTest:
         utf.ExpectEqual(actual, expected)
 
     def Student_AddHomework_Test_3(self):
-        """
-        This module needed for testing is homework added to student
-        """
+        """ This module needed for testing is homework added to student """
 
         self.StudentTestSetUp()
         actual = len(self.test_student.homeworks)
@@ -101,9 +86,7 @@ class StudentTest:
         utf.ExpectEqual(actual, expected)
 
     def Student_AddHomework_Exception_Test_1(self):
-        """
-        This module needed for testing is exceptions of homework added to student
-        """
+        """ This module needed for testing is exceptions of homework added to student """
 
         self.StudentTestSetUp()
         def block():
@@ -111,9 +94,7 @@ class StudentTest:
         utf.ExpectThrown(block, HomeworkStatusException())
 
     def Student_is_homework_done_Exception_test_1(self):
-        """
-        This module needed for testing exceptions is the student's homework done
-        """
+        """ This module needed for testing exceptions is the student's homework done """
 
         self.StudentTestSetUp()
         def block():
@@ -124,9 +105,7 @@ class StudentTest:
 
 
     def Student_AddHomework_ExpectNotThrown_test_1(self):
-        """
-        This module needed for testing is exceptions of homework added to student
-        """
+        """ This module needed for testing is exceptions of homework added to student """
         
         self.StudentTestSetUp()
         def block():
